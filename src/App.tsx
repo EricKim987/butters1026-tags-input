@@ -714,6 +714,9 @@ const noop = () => {};
 function App() {
   const [tags, setTags] = useState<ColorItem[]>([]);
   const [inputValue, setInputValue] = useState<string>("");
+
+  // ------------------------ Handlers -----------------------------------
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
     const value = e.target.value;
     setInputValue(value);
@@ -766,7 +769,7 @@ function App() {
           onKeyPress={handleKeyPress}
         />
       </div>
-      <div className="dropdown">
+      {/* <div className="dropdown">
         {colors.map((color) => {
           if (!!inputValue && color.name.includes(inputValue)) {
             return (
@@ -781,7 +784,7 @@ function App() {
             return null;
           }
         })}
-      </div>
+      </div> */}
     </div>
   );
 }
